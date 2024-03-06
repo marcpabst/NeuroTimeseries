@@ -1,12 +1,8 @@
 
-
-include("timeseries_types.jl")
-
 # Abstract types for EEG data
 abstract type AbstractEEGRaw{T} <: AbstractMultivariateTimeseries{2,T} end
 abstract type AbstractEEGEpochs{T} <: AbstractMultivariateTimeseries{3,T} end
 abstract type AbstractEEGChannelInfo <: AbstractTimeseriesChannelInfo end
-
 
 """
 Return the number of epochs.
@@ -22,7 +18,6 @@ Returns the name of the channel.
 Returns the type of the channel.
 """
 @mustimplement type(channel::AbstractEEGChannelInfo)
-
 
 
 # Custom printing method for EEG data
