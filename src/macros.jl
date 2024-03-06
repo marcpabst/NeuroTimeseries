@@ -1,3 +1,4 @@
+# this macro was taken from Graphics.jl
 macro mustimplement(sig)
     fname = sig.args[1]
     arg1 = sig.args[2]
