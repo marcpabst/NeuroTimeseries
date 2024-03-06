@@ -18,6 +18,10 @@ struct MNERaw <: AbstractEEGRaw{Float64}
     function MNERaw(data::PyMNE.Py)
         new(data, PyMNE.pyconvert(PyMNE.PyArray, data._data))
     end
+
+    function MNERaw(fname::String, preload::Bool=true)
+        data = PyMNE.io.read_raw(fname, preload=preload)
+        new(data, PyMNE.pyconvert(PyMNE.PyArray, data._data))
 end
 
 function samplingrate(d::MNERaw)

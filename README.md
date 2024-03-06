@@ -10,7 +10,7 @@ This package is designed to be lightweight and flexible, and to work with other 
 
 # load data
 
-raw = EEGRaw(PyMNE.io.read_raw_bdf("raweeg.bdf", preload=true))
+raw = MNERaw("path/to/raw.bdf")
 
 # number of channels
 
