@@ -6,18 +6,16 @@ This package is designed to be lightweight and flexible, and to work with other 
 
 ## Example
 
-```julia using PyMNE using MNETimeseries
+```julia
+using PyMNE 
+using MNETimeseries
 
 # load data
-
 raw = MNERaw("path/to/raw.bdf")
 
 # number of channels
-
 nchannels(raw) # > 64
 
 # channel names
-
 name.(channels(raw)) # > ["Fp1", "Fp2", "F3", "F4", ...]
-
 ```
