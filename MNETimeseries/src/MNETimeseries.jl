@@ -1,5 +1,9 @@
+module MNETimeseries
+
 using PyMNE
 import Base: size, getindex, show
+
+export MNEChannelInfo, MNERaw
 
 struct MNEChannelInfo <: AbstractEEGChannelInfo
     inner::PyMNE.Py
@@ -49,3 +53,6 @@ function Base.setindex!(A::MNERaw, value, inds...)
 end
 
 
+
+
+end # module MNETimeseries
