@@ -1,6 +1,9 @@
 module MNETimeseries
 
+
+
 using PyMNE
+using NeuroTimeseries
 import Base: size, getindex, show
 
 export MNEChannelInfo, MNERaw
