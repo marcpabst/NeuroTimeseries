@@ -1,10 +1,8 @@
 module MNETimeseries
 
-
-
 using PyMNE
 using NeuroTimeseries
-import Base: size, getindex, show
+import Base: size, getindex, setindex!, show
 
 export MNEChannelInfo, MNERaw
 
@@ -51,7 +49,7 @@ function Base.size(d::MNERaw)
     return size(data(d))
 end
 
-function getindex(A::MNERaw, inds...)
+function Base.getindex(A::MNERaw, inds...)
     return getindex(data(A), inds...)
 end
 
