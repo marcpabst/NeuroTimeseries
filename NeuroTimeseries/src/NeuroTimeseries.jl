@@ -1,18 +1,18 @@
 module NeuroTimeseries
 
 export AbstractMultivariateTimeseries,
-    AbstractTimeseriesChannelInfo,
     AbstractEEGRaw, AbstractEEGEpochs,
-    AbstractEEGChannelInfo,
-    nchannels,
+    AbstractSensorInfo,
+    nsensors,
     nsamples,
     nepochs,
     samplingrate,
     duration, channels,
+    sensornames,
+    sensors,
     channelnames, name, type
 
 include("macros.jl")
 include("timeseries_types.jl")
-include("eeg_types.jl")
 
 end # module NeuroTimeseries

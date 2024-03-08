@@ -1,0 +1,5 @@
+[deps]
+MNE = "94b60020-aa4c-4071-9754-3d6d25070732"
+NeuroTimeseries = "7a7a2511-8a21-462c-a0b5-d33562f5355e"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
